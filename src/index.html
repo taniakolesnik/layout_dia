@@ -15,9 +15,18 @@
       rel="preconnect"
       href="https://fonts.gstatic.com"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="shortcut icon"
       href="./images/logo/air-logo-black.svg"
@@ -30,7 +39,6 @@
     <script src="scripts/main.js"></script>
   </head>
   <body>
-    <div class="square"></div>
     <header class="header">
       <div class="top-bar">
         <div class="top-bar__icon">
@@ -73,17 +81,49 @@
           challenges.
         </p>
         <div class="header__learn-more">
-          <a href="#" class="header__learn-more--link">
+          <a
+            href="#"
+            class="header__learn-more--link"
+          >
             Learn more
           </a>
         </div>
       </div>
-      <div class="header__intro">
-        <img
-          src="./images/slider/slide-img-1.png"
-          alt="intro"
-          class="header__intro_photo"
-        />
+      <div class="slider">
+        <div id="slide-one" class="slider__photo slider__photo--one"></div>
+
+        <div id="slide-two" class="slider__photo slider__photo--two"></div>
+
+        <div class="slider-controls">
+          <div class="slider-controls__wrapper">
+            <div class="slider-controls__buttons">
+              <a class="slider-slider-button__link" href="#">
+                <div class="slider-button slider-button--left">
+                  <img
+                    class="slider-button__icon"
+                    src="./images/slider/arrow-left-black.svg"
+                    alt="slider-button"
+                  />
+                </div>
+              </a>
+              <a class="slider-button__link" href="#">
+                <div class="slider-button slider-button--right">
+                  <img
+                    class="slider-button__icon"
+                    src="./images/slider/arrow-right-black.svg"
+                    alt="slider-button"
+                  />
+                </div>
+              </a>
+            </div>
+            <p class="slider-controls__quote slider-controls__quote--title">
+              Intro
+            </p>
+            <p class="slider-controls__quote">
+              By the same illusion which lifts the horizon.
+            </p>
+          </div>
+        </div>
       </div>
     </header>
 
