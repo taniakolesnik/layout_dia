@@ -1,7 +1,14 @@
 @import 'utils';
 @import 'fonts';
 @import 'typography';
+@import './blocks/top-bar';
+@import './blocks/header';
 
 body {
+  margin: 0;
   background: $c-gray;
+}
+
+.square {
+  @include page-grid;
 }

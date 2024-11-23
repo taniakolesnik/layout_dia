@@ -1,6 +1,33 @@
+@mixin on-tablet {
+  @media (min-width : 640px) {
+    @content;
+  }
+}
+
+
 @mixin hover($_property, $_toValue) {
   transition: #{$_property} 0.3s;
   &:hover {
     #{$_property}: $_toValue;
+  }
+}
+
+
+@mixin page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @include on-tablet {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+  }
+}
+
+@mixin container-padding-inline {
+  padding-inline: 20px;
+
+  @include on-tablet {
+    padding-inline: 40px;
   }
 }

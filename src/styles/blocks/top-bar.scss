@@ -1,0 +1,56 @@
+.top-bar {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include container-padding-inline;
+
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+    gap: 32px;
+    align-items: center;
+
+
+    &--logo {
+      width: 46px;
+
+    }
+
+    &--menu {
+      width: 24px;
+
+    }
+
+  }
+
+  &__hire {
+
+    &--link {
+      position: relative;
+      text-decoration: none;
+      font-size: 13px;
+      font-family: $light-test-color;
+      font-weight: 700;
+      line-height: 19.5px;
+      letter-spacing: 3px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      text-transform: uppercase;
+      color: $light-test-color;
+
+      &::after {
+        position: absolute;
+        content: "";
+        height: 2px;
+        border-radius: 4px;
+        background-color: $second-accent-color;
+        top: 20px;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+}
