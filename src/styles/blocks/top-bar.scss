@@ -6,23 +6,20 @@
 
   @include container-padding-inline;
 
-  &__icons {
+  &__icon {
     display: flex;
-    justify-content: space-around;
-    gap: 32px;
+    height: 30px;
+    gap:24px;
     align-items: center;
 
 
     &--logo {
       width: 46px;
-
     }
 
     &--menu {
-      width: 24px;
-
+      width: 18px;
     }
-
   }
 
   &__hire {

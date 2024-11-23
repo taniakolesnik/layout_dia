@@ -1,3 +1,19 @@
 .header {
   background-color: $main-accent-color;
+
+  &__title {
+    @include container-padding-inline;
+
+    font-family: $font-family;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: -2px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: $light-test-color;
+
+  }
+
 }
