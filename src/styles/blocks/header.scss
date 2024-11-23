@@ -1,5 +1,9 @@
 .header {
-  background-color: $main-accent-color;
+  background: rgb(44,44,44);
+  background: linear-gradient(
+      180deg,
+    rgba(44,44,44,1) 59%,
+    rgba(242,246,250,1) 62%);
 
   &__central{
     @include container-padding-inline;
