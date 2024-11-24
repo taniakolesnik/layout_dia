@@ -1,0 +1,154 @@
+.testimonials {
+  margin-top: 120px;
+
+  @include on-tablet {
+    margin-top: 160px;
+  }
+
+  &-section__wrapper {
+    @include container-padding-inline;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__title-wrapper {
+    display: flex;
+
+  }
+
+  &__title {
+    position: relative;
+    font-family: $font-family;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #253757;
+    margin-bottom: 48px;
+
+    @include on-tablet {
+      margin-bottom: 60px;
+    }
+
+    &::before {
+      position: absolute;
+      content: 'Testimonials';
+      font-family: $font-family;
+      top: -30px;
+      left: 5px;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 3px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #c0cdd7;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.testimonial {
+  border-radius: 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+
+  &__wrapper {
+    margin: 0;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-top: 24px;
+    background-image: url(../images/reviews/quote-icon.svg);
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    margin-top: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 19.5px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #6C788B;
+  }
+
+  &__name {
+    margin-top: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 19.5px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #253757;
+  }
+
+  &__company {
+    margin-top: 4px;
+    font-family: $font-family;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19.5px;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #C0CDD7;
+  }
+}
+
+.photo {
+  &__wrapper {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__picture {
+    z-index: 1;
+    width:140px; height:140px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__background-element {
+    width: 56px;
+    height: 140px;
+    background-color: #2060F6;
+    border-radius: 12px;
+    rotate: 30deg;
+
+    &--left {
+      transform: translate(20px, -70px);
+    }
+
+    &--right {
+      transform: translate(-20px, 70px);
+    }
+  }
+
+}
+
