@@ -1,0 +1,98 @@
+.expertise {
+  @include container-padding-inline;
+  @include page-grid;
+
+  margin-top: 120px;
+  background-color: white;
+  border-radius: 30px;
+
+  @include on-tablet{
+    padding-block: 128px;
+    margin-top: 148px;
+    gap: 72px;
+  }
+
+  &__wrapper {
+    grid-column: 1/-1;
+    padding-block: 72px;
+
+    @include on-tablet{
+      grid-column: 2/-2;
+    }
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-size: 44px;
+    font-weight: 600;
+    line-height: 50px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #253757;
+
+    @include on-tablet{
+      font-size: 52px;
+      line-height: 80px;
+    }
+
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__photo  {
+    margin-top: 56px;
+
+    // ../images/slider/slide-img-1.png
+
+    width: 166px;
+    height: 166px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+
+    &--branding {
+      background-image: url(../images/expetrise/image-1.png);
+    }
+
+    &--communication {
+      background-image: url(../images/expetrise/image-2.png);
+    }
+
+    &--strategy {
+      background-image: url(../images/expetrise/image-3.png);
+    }
+
+  }
+
+  &__name {
+    margin: 0;
+    font-family: $font-family;
+    margin-top: 32px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #253757;
+  }
+
+  &__details {
+    margin-top: 16px;
+    font-family: "Open Sans", sans-serif;
+    color: #6C788B;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+}
