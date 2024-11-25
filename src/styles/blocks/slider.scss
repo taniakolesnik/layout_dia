@@ -1,147 +1,155 @@
 .slider {
-  margin-top: 48px;
-  position: relative;
+  position: absolute;
+  background-color: red;
   height: 390px;
+  width: 100%;
 
-  &__photo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+  bottom: -100px;;
+  right: 0;
+  left: 0; // Adjust this to p
 
-    &--one {
-      background-image: linear-gradient(
-        169deg,
-        rgba(255, 255, 255, 0.1) 46%,
-        rgba(17, 213, 251, 1) 71%,
-        rgba(3, 138, 167, 1) 93%
-      ),
-        url(../images/slider/slide-img-1.png);
+  @include on-desktop {
+    height: 680px;
+    width: 100%;
+    inset: auto 0 0 60%;
 
-        transition: all 0.3s  ease-in-out;
-        opacity: 0;
-        pointer-events: none;
-        transform: translate(-100%);
-
-        &:target {
-          z-index: 1;
-          height: 100%;
-          overflow: hidden;
-          opacity: 1;
-          transform: translate(0);
-          pointer-events: all;
-        }
-    }
-
-    &--two {
-      background-image: linear-gradient(
-        169deg,
-        rgba(255, 255, 255, 0.1) 46%,
-        rgba(17, 213, 251, 1) 71%,
-        rgba(3, 138, 167, 1) 93%
-      ),
-        url(../images/slider/slide-img-2.png);
-
-        &:target {
-          z-index: 1;
-          height: 100%;
-          overflow: hidden;
-          opacity: 1;
-          transform: translate(0);
-          pointer-events: all;
-        }
-    }
-
-    &--three {
-      background-image: linear-gradient(
-          169deg,
-          rgba(255, 255, 255, 0.1) 46%,
-          rgba(17, 213, 251, 1) 71%,
-          rgba(3, 138, 167, 1) 93%
-        ),
-        url(../images/slider/slide-img-3.png);
-
-        &:target {
-          z-index: 1;
-          height: 100%;
-          overflow: hidden;
-          opacity: 1;
-          transform: translate(0);
-          pointer-events: all;
-        }
-    }
-
-    border-radius: 30px;
-    background-size: cover;
-    background-position: center;
-    height: 100%;
+    // inset:
   }
 
-  &-controls {
-    position: relative;
+  // &__photo {
+  //   border-radius: 30px;
+  //   height: 100%;
+  //   width: 100%;
+  //   object-position: 0;
+  //   border-radius: 30px;
+  //   background-size: cover;
+  //   background-position: center;
 
-    &__wrapper {
-      padding-inline: 20px;
-      position: absolute;
-      top: 230px;
-      right: 0;
-      left: 20px;
-      padding: 1
-    }
+  //   background-image: linear-gradient(
+  //       170deg,
+  //       rgba(255, 255, 255, 0.1) 56%,
+  //       rgba(255, 255, 251, 0.1) 10%,
+  //       rgba(3, 138, 167, 1) 83%
+  //     ),
+  //       url(../images/slider/slide-img-1.png);
 
-    &__buttons {
-      display: flex;
-      gap: 24px;
-      justify-content: flex-start;
-    }
+  //   // &--one {
+  //   //   background-image: linear-gradient(
+  //   //     170deg,
+  //   //     rgba(255, 255, 255, 0.1) 56%,
+  //   //     rgba(255, 255, 251, 0.1) 10%,
+  //   //     rgba(3, 138, 167, 1) 83%
+  //   //   ),
+  //   //     url(../images/slider/slide-img-1.png);
+  //   // }
+  // }
 
-    &__quote {
-      color: $light-test-color;
-      font-family: "Open Sans", sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-      text-align: left;
-      text-underline-position: from-font;
-      text-decoration-skip-ink: none;
+  //   // &--two {
+  //   //   background-image: linear-gradient(
+  //   //     169deg,
+  //   //     rgba(255, 255, 255, 0.1) 46%,
+  //   //     rgba(17, 213, 251, 1) 71%,
+  //   //     rgba(3, 138, 167, 1) 93%
+  //   //   ),
+  //   //     url(../images/slider/slide-img-2.png);
 
-      &--title {
-        font-family: $font-family;
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 3px;
-      }
-    }
-  }
+  //   //     &:target {
+  //   //       z-index: 1;
+  //   //       height: 100%;
+  //   //       overflow: hidden;
+  //   //       opacity: 1;
+  //   //       transform: translate(0);
+  //   //       pointer-events: all;
+  //   //     }
+  //   // }
 
-  &-button {
-    background-color: #fff;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  //   // &--three {
+  //   //   background-image: linear-gradient(
+  //   //       169deg,
+  //   //       rgba(255, 255, 255, 0.1) 46%,
+  //   //       rgba(17, 213, 251, 1) 71%,
+  //   //       rgba(3, 138, 167, 1) 93%
+  //   //     ),
+  //   //     url(../images/slider/slide-img-3.png);
 
-    &__icon {
-      width: 5px;
-    }
+  //   //     &:target {
+  //   //       z-index: 1;
+  //   //       height: 100%;
+  //   //       overflow: hidden;
+  //   //       opacity: 1;
+  //   //       transform: translate(0);
+  //   //       pointer-events: all;
+  //   //     }
+  //   // }
 
-    // &__link {
-    // }
+
+  // }
+
+  // &-controls {
+  //   position: relative;
+
+  //   &__wrapper {
+  //     padding-inline: 20px;
+  //     position: absolute;
+  //     top: 230px;
+  //     right: 0;
+  //     left: 20px;
+  //     padding: 1
+  //   }
+
+  //   &__buttons {
+  //     display: flex;
+  //     gap: 24px;
+  //     justify-content: flex-start;
+  //   }
+
+  //   &__quote {
+  //     color: $light-test-color;
+  //     font-family: "Open Sans", sans-serif;
+  //     font-size: 14px;
+  //     font-weight: 400;
+  //     line-height: 20px;
+  //     text-align: left;
+  //     text-underline-position: from-font;
+  //     text-decoration-skip-ink: none;
+
+  //     &--title {
+  //       font-family: $font-family;
+  //       font-size: 13px;
+  //       font-weight: 700;
+  //       letter-spacing: 3px;
+  //     }
+  //   }
+  // }
+
+  // &-button {
+  //   background-color: #fff;
+  //   border-radius: 50%;
+  //   width: 32px;
+  //   height: 32px;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+
+  //   &__icon {
+  //     width: 5px;
+  //   }
+
+  //   // &__link {
+  //   // }
 
 
-    // &--left {
+  //   // &--left {
 
-    //   &:target {
+  //   //   &:target {
 
-    //   }
-    // }
+  //   //   }
+  //   // }
 
-    // &--right {
+  //   // &--right {
 
-    // }
-  }
+  //   // }
+  // }
 }
 
 

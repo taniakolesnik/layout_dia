@@ -4,6 +4,11 @@
   }
 }
 
+@mixin on-desktop {
+  @media (min-width : 1024px) {
+    @content;
+  }
+}
 
 @mixin hover($_property, $_toValue) {
   transition: #{$_property} 0.3s;
@@ -11,7 +16,6 @@
     #{$_property}: $_toValue;
   }
 }
-
 
 @mixin page-grid {
   display: grid;
@@ -22,12 +26,21 @@
     grid-template-columns: repeat(6, 1fr);
     gap: 30px;
   }
+
+  @include on-desktop {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+  }
 }
 
 @mixin container-padding-inline {
-  padding-inline: 20px;
+  padding-inline: $container-inline-margin-mobile;
 
   @include on-tablet {
-    padding-inline: 40px;
+    padding-inline: $container-inline-margin-tablet;
+  }
+
+  @include on-desktop {
+    padding-inline: $container-inline-margin-desktop;
   }
 }

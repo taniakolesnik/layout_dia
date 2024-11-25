@@ -8,11 +8,10 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    padding-block: 72px;
-    background-color: white;
+    padding-top: 72px;
 
     @include container-padding-inline;
-    
+
     @include on-tablet {
       background-image: url(../images/Shapes.png);
     }
@@ -71,6 +70,7 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     margin-top: 56px;
+    margin-bottom: 72px;
 
     @include on-tablet {
       margin-top: 64px;

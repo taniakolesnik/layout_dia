@@ -74,7 +74,7 @@
           </a>
         </div>
       </div>
-      <div class="header__central">
+      <div class="header__wrapper">
         <h1 class="header__title">Stategic Agency</h1>
         <p class="header__sub-title">
           We believe in the power of bold ideas that can solve business
@@ -88,55 +88,56 @@
             Learn more
           </a>
         </div>
-      </div>
-      <div class="slider">
-        <div
-          id="slide-one"
-          class="slider__photo slider__photo--one"
-        ></div>
 
-        <div
-          id="slide-two"
-          class="slider__photo slider__photo--two"
-        ></div>
-
-        <div class="slider-controls">
-          <div class="slider-controls__wrapper">
-            <div class="slider-controls__buttons">
-              <a
-                class="slider-slider-button__link"
-                href="#"
-              >
-                <div class="slider-button slider-button--left">
-                  <img
-                    class="slider-button__icon"
-                    src="./images/slider/arrow-left-black.svg"
-                    alt="slider-button"
-                  />
-                </div>
-              </a>
-              <a
-                class="slider-button__link"
-                href="#"
-              >
-                <div class="slider-button slider-button--right">
-                  <img
-                    class="slider-button__icon"
-                    src="./images/slider/arrow-right-black.svg"
-                    alt="slider-button"
-                  />
-                </div>
-              </a>
+        <div class="slider">
+          <div
+            id="slide-one"
+            class="slider__photo slider__photo--one"
+          ></div>
+          <!-- <div id="slide-two"
+            class="slider__photo slider__photo--two"
+          ></div> -->
+          <!-- <div class="slider-controls">
+            <div class="slider-controls__wrapper">
+              <div class="slider-controls__buttons">
+                <a
+                  class="slider-slider-button__link"
+                  href="#"
+                >
+                  <div class="slider-button slider-button--left">
+                    <img
+                      class="slider-button__icon"
+                      src="./images/slider/arrow-left-black.svg"
+                      alt="slider-button"
+                    />
+                  </div>
+                </a>
+                <a
+                  class="slider-button__link"
+                  href="#"
+                >
+                  <div class="slider-button slider-button--right">
+                    <img
+                      class="slider-button__icon"
+                      src="./images/slider/arrow-right-black.svg"
+                      alt="slider-button"
+                    />
+                  </div>
+                </a>
+              </div>
+              <p class="slider-controls__quote slider-controls__quote--title">
+                Intro
+              </p>
+              <p class="slider-controls__quote">
+                By the same illusion which lifts the horizon.
+              </p>
             </div>
-            <p class="slider-controls__quote slider-controls__quote--title">
-              Intro
-            </p>
-            <p class="slider-controls__quote">
-              By the same illusion which lifts the horizon.
-            </p>
-          </div>
+          </div> -->
         </div>
+
       </div>
+
+
     </header>
 
     <section
@@ -395,16 +396,167 @@
     >
       <div class="apply__wrapper">
         <h2 class="apply__title">Vision, Passion, Results</h2>
-        <p class="apply__sub-title">We are sure that
-          first-rate job is possible
-          only if all three components are united.
+        <p class="apply__sub-title">
+          We are sure that first-rate job is possible only if all three
+          components are united.
         </p>
 
-        <a class="apply__button" href="#">
+        <a
+          class="apply__button"
+          href="#apply"
+        >
           Apply
         </a>
-
       </div>
     </section>
+
+    <section
+      class="section contact"
+      id="contact"
+    >
+      <div class="contact__wrapper">
+        <div class="contact-form__wrapper">
+          <h3 class="contact__title">Send us a message</h3>
+
+          <form
+            class="contact-form"
+            autocapitalize="off"
+            onsubmit="event.preventDefault(); this.reset();"
+          >
+            <input
+              class="contact-form__field"
+              type="email"
+              id="email"
+              placeholder="Your email"
+              required
+            />
+
+            <input
+              class="contact-form__field"
+              type="text"
+              id="name"
+              minlength="2"
+              placeholder="Your name"
+              required
+            />
+
+            <textarea
+              class="contact-form__field contact-form__field--textarea"
+              type="text"
+              minlength="4"
+              required
+              rows="1"
+              placeholder="Your message"
+            ></textarea>
+
+            <input
+              class="contact-form__field contact-form__field--submit"
+              value="Send"
+            />
+          </form>
+        </div>
+
+        <div class="contact-us__wrapper">
+          <h3 class="contact__title">Contact us</h3>
+
+          <div class="contact-us__method">
+            <div class="contact-us__method--title">Call us</div>
+            <a
+              href="tel:11111111111"
+              target="_blank"
+              class="contact-us__method--value"
+            >
+              654 321 987
+            </a>
+          </div>
+
+          <div class="contact-us__method">
+            <div class="contact-us__method--title">Visit us</div>
+            <a
+              href="https://maps.google.com/?q=2905 West Drive, Buffalo Grove"
+              target="_blank"
+              class="contact-us__method--value"
+            >
+              2905 West Drive, Buffalo Grove
+            </a>
+          </div>
+
+          <div class="contact-us__method">
+            <div class="contact-us__method--title">Our socials</div>
+            <div class="social">
+              <a
+                href="#"
+                class="social__icon social__icon--facebook"
+              ></a>
+              <a
+                href="#"
+                class="social__icon social__icon--twitter"
+              ></a>
+              <a
+                href="#"
+                class="social__icon social__icon--instagram"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <a href="#">
+          <img
+            class="footer__icon"
+            src="./images/logo/air-logo.png"
+            alt="logo"
+          />
+        </a>
+
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a
+                href="#about-us"
+                class="nav__link"
+              >
+                About us
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#"
+                class="nav__link"
+              >
+                Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#expertise"
+                class="nav__link"
+              >
+                Work
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#services"
+                class="nav__link"
+              >
+                Services
+              </a>
+            </li>
+            <li class="nav__item">
+              <a
+                href="#contact"
+                class="nav__link"
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>

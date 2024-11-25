@@ -1,0 +1,159 @@
+.contact {
+  padding-top: 80px;
+  padding-bottom: 30px;
+  margin-top: 120px;
+  border-radius: 30px 30px 0 0;
+  background-color: $main-accent-color;
+
+  &__wrapper {
+    @include page-grid;
+    @include container-padding-inline;
+
+  }
+
+  &__title {
+    color: white;
+    font-family: $font-family;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 42px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}
+
+
+.contact-us {
+
+  &__wrapper {
+    margin-top: 80px;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include on-tablet {
+      margin-top: 120px;
+      grid-column: span 4;
+    }
+  }
+
+  &__method {
+    display: flex;
+    flex-direction: column;
+
+
+    &--title {
+      color: white;
+      font-family: $font-family;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 19.5px;
+      letter-spacing: 3px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      text-transform: uppercase;
+    }
+
+    &--value {
+      color: white;
+      font-family: "Open Sans", sans-serif;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 36px;
+      text-align: left;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      text-decoration: none;
+    }
+  }
+}
+
+.social {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  gap: 32px;
+
+  &__icon {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &--facebook {
+      background-image: url(../images/logo/facebook-logo.svg);
+    }
+
+    &--twitter {
+      background-image: url(../images/logo/twitter-logo.svg);
+    }
+
+    &--instagram {
+      background-image: url(../images/logo/instagram-logo.svg);
+    }
+  }
+
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &__wrapper {
+    grid-column: 1/-1;
+
+    @include on-tablet{
+      grid-column: span 4;
+    }
+  }
+
+  &__field{
+    font-family: $font-family;
+    font-size: 15px;
+    padding-block: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: white;
+    background-color: $main-accent-color;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+
+    ::placeholder {
+      color: white;
+      opacity: 0.7;
+    }
+
+    @include on-tablet {
+      gap: 50px;
+    }
+
+    &--textarea {
+      resize: none
+    }
+
+
+  &--submit {
+    margin-top: 16px;
+    background-color: #144ED4;
+    border: none;
+    padding-block: 17px;
+    text-align: center;
+    border-radius: 8px;
+
+    @include on-tablet {
+      margin-top: 40px;
+    }
+  }
+  }
+}

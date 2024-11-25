@@ -9,7 +9,9 @@
 @import './blocks/services';
 @import './blocks/testimonials';
 @import './blocks/apply';
-
+@import './blocks/contact';
+@import './blocks/footer';
+@import './blocks/nav';
 
 body {
   margin: 0;
@@ -17,6 +19,3 @@ body {
   min-width: 320px;
 }
 
-.square {
-  @include page-grid;
-}

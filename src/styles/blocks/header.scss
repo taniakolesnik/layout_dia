@@ -1,15 +1,26 @@
 .header {
-  background: rgb(44,44,44);
-  background: linear-gradient(
-      180deg,
-    rgba(44,44,44,1) 59%,
-    rgba(242,246,250,1) 62%);
+  background-color: $main-accent-color;
 
-  &__central{
+  &__wrapper {
     @include container-padding-inline;
+
+    padding-top: 40px;
+    padding-bottom: 200px;
+    overflow: hidden;
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+
+    @include on-desktop {
+      justify-content: center;
+      padding-top: 150px;
+    }
   }
 
   &__title {
+    margin: 0;
+    color: $light-test-color;
     font-family: $font-family;
     font-size: 52px;
     font-weight: 600;
@@ -18,11 +29,15 @@
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    color: $light-test-color;
-    margin-top: 48px;
+
+    @include on-tablet {
+      font-size: 64px;
+      line-height: 68px;
+    }
   }
 
   &__sub-title {
+    margin: 0;
     font-family: "Open Sans", sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -31,19 +46,23 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: $light-test-color;
-    margin-top: 32px;
+    margin-top: 30px;
+
+    @include on-tablet {
+      width: 362px;
+    }
   }
 
   &__learn-more {
-    margin-top: 72px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    position: relative;
+
 
     &--link {
       display: block;
       margin: 0;
-      width: 100%;
+      width: 100%px;
       text-decoration: none;
       font-family: $font-family;
       font-size: 15px;
@@ -56,7 +75,11 @@
       border-radius: 8px;
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
+
+      @include on-tablet {
+        width: 264px;
+      }
+
     }
   }
-
 }

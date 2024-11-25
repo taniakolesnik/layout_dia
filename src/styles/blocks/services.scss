@@ -4,9 +4,14 @@
   &__wrapper {
     @include page-grid;
 
-    grid-template-rows: repeat(6, 1fr);
-    gap: 24px;
+    grid-template-rows: repeat(5, 1fr);
 
+    @include on-tablet {
+      grid-template-rows: repeat(6, 1fr);
+    }
+
+    gap: 24px;
+    
     @include container-padding-inline;
   }
 
