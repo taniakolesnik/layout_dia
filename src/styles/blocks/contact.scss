@@ -37,6 +37,11 @@
       margin-top: 120px;
       grid-column: span 4;
     }
+
+    @include on-desktop {
+      margin-top: 0;
+      grid-column: 6/10;
+    }
   }
 
   &__method {
