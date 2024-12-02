@@ -1,7 +1,9 @@
 .expertise {
   @include container-padding-inline;
-  @include page-grid;
-
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   margin-top: 120px;
   background-color: white;
   border-radius: 30px;
@@ -17,6 +19,28 @@
 
     @include on-tablet{
       grid-column: 2/-2;
+    }
+
+    @include on-desktop{
+      grid-column: span 3;
+    }
+
+    &-items {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      @include on-tablet{
+        flex-direction: row;
+        gap: 30px;
+        align-items: baseline;
+      }
+
+      @include on-desktop{
+        flex-direction: row;
+        gap: 30px;
+        align-items: baseline;
+      }
     }
   }
 
@@ -84,6 +108,7 @@
 
   &__details {
     margin-top: 16px;
+    padding-inline: 20px;
     font-family: "Open Sans", sans-serif;
     color: #6C788B;
     font-size: 14px;
@@ -92,6 +117,7 @@
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    max-width: 330px;
   }
 
 }
